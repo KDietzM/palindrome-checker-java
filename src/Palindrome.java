@@ -4,24 +4,24 @@ public class Palindrome {
         java.util.Scanner scan = new java.util.Scanner(System.in);
         System.out.println("Zu prüfenden Text eingeben: ");
         String input = scan.nextLine();
-        String lowered = lower(input);
+        String lowered = lowerCase(input);
         String noSpaces = removeSpaces(lowered);
-        boolean result = checkPal(noSpaces);
+        boolean result = isPalindrome(noSpaces);
 
         if (result) {
-            System.out.println("Given input is a palindrome. ");
+            System.out.println("Given input is a palindrome.");
         }
         else {
-            System.out.println("Given input isn't a palindrome. ");
+            System.out.println("Given input isn't a palindrome.");
         }
     }
 
-    public static boolean checkPal(String input){
+    public static boolean isPalindrome(String input){
         String reversed = new StringBuilder(input).reverse().toString();
         return input.equals(reversed);
     }
 
-    public static String lower(String input){
+    public static String lowerCase(String input){
         return input.toLowerCase();
     }
 
@@ -30,3 +30,4 @@ public class Palindrome {
     }
 
 }
+
