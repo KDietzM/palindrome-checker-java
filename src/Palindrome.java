@@ -22,7 +22,7 @@ public class Palindrome {
     }
 
     public static String lower(String input){
-       return input.toLowerCase();
+        return input.toLowerCase();
     }
 
     public static String removeSpaces(String input){
