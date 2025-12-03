@@ -1,3 +1,4 @@
+package de.ulbms.scdh.spike.git;
 
 public class Palindrome {
     public static void main(String[] args){
