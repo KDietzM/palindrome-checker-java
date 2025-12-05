@@ -1,0 +1,9 @@
+image: maven:3.9-eclipse-temurin-17
+
+stages:
+  - test
+
+test-job:
+  stage: test
+  script:
+    - mvn -B test
