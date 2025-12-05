@@ -18,7 +18,9 @@ Das Projekt enthält:
 
 ## Run
 `mvn compile exec:java -Dexec.mainClass="de.ulbms.scdh.spike.git.Palindrome"`
+
 oder 
+
 `javac src/main/java/de/ulbms/scdh/spike/git/Palindrome.java
 java -cp src/main/java de.ulbms.scdh.spike.git.Palindrome`
 
