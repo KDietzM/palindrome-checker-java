@@ -1,10 +1,10 @@
 package de.ulbms.scdh.spike.git;
 
 /**
- * * Checks if a given string input is a palindrome
- *      * meaning it can be read forwards and backwards.
- *      * The input string gets normalized by removing spaces
- *      * and changing all uppercase chars to lowercase.
+ * Checks if a given string input is a palindrome
+ * meaning it can be read forwards and backwards.
+ * The input string gets normalized by removing spaces
+ * and changing all uppercase chars to lowercase.
  */
 public class Palindrome {
     public static void main(String[] args){
