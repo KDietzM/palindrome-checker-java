@@ -30,6 +30,6 @@ test-job:
 pages:
   stage: deploy
   script:
-    - cp target/reports/apidocs public
+    - cp -rf target/reports/apidocs public
   dependencies:
     - build_docs
