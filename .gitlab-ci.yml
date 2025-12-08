@@ -1,9 +1,33 @@
 image: maven:3.9-eclipse-temurin-17
 
 stages:
+  - build
   - test
+  - deploy
+
+build:
+  stage: build
+  script:
+   - ./mvnw package
+  artifacts:
+    - target/*.jar
+
+build_docs:
+  stage: build
+  script:
+    - ./mvnw javadoc:javadoc
+  artifacts:
+    - target/reports
+
 
 test-job:
   stage: test
   script:
-    - mvn -B test
+    - ./mvnw -B test
+
+pages:
+  stage: deploy
+  script:
+    - cp target/reports/apidocs public
+  dependencies:
+    - build_docs
