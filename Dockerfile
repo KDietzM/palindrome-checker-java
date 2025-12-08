@@ -7,4 +7,4 @@ COPY * /
 
 RUN  mvn package
 
-CMD ["java", "-cp", "PalindromeChecker/target/classes", "de.ulbms.scdh.spike.git.Palindrome"]
+CMD ["java", "-cp", "target/classes", "de.ulbms.scdh.spike.git.Palindrome"]

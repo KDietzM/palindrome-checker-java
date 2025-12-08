@@ -1,5 +1,6 @@
 package de.ulbms.scdh.spike.git;
 
+/** Testkommentar */
 public class Palindrome {
     public static void main(String[] args){
         java.util.Scanner scan = new java.util.Scanner(System.in);
