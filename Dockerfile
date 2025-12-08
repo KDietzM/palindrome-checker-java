@@ -1,10 +1,8 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y openjdk-17-jdk-headless
-RUN apt-get install -y maven
+RUN apt-get update && apt-get install -y openjdk-17-jre-headless
 
-COPY * /
+COPY target/*.jar .
 
-RUN  mvn package
 
-CMD ["java", "-cp", "target/classes", "de.ulbms.scdh.spike.git.Palindrome"]
+CMD ["java", "-cp", "git-spike-0.1.0.jar", "de.ulbms.scdh.spike.git.Palindrome"]
