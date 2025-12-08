@@ -13,6 +13,13 @@ build:
     paths:
     - target/*.jar
 
+
+build-img:
+    stage: build
+    script:
+      - docker build -t palindrome.java
+
+
 build_docs:
   stage: build
   script:
