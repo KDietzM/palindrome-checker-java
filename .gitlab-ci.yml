@@ -15,9 +15,12 @@ build:
 
 
 build-img:
-    stage: build
-    script:
-      - docker build -t palindrome.java
+  stage: build
+  script:
+    - docker build -t palindrome.java
+  dependencies:
+    - build
+  image: docker
 
 
 build_docs:
