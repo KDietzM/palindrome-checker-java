@@ -21,3 +21,9 @@ jobs:
 
       - name: run maven
         run: mvn -Drevision=${{github.ref_name}} -Dchangelist="" --batch-mode --update-snapshots package
+
+      - name: upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: target/*.jar
